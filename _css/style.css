@@ -39,18 +39,18 @@ body {
 /*Botões Seguir, Seguindo e Editar perfil*/
 .btn-follow {
     display: block;
-    padding: 7px 80px;
-    border-radius: 0px;
+    padding: 7px 80px !important;
+    border-radius: 0px !important;
 }
 .btn-following {
     display: block;
-    padding: 7px 70px;
-    border-radius: 0px;
+    padding: 7px 70px !important;
+    border-radius: 0px !important;
 }
 .btn-edit {
     display: block;
-    padding: 1px 5px;
-    border-radius: 0px;
+    padding: 1px 5px !important;
+    border-radius: 0px !important;
 }
 
 .divider-horizontal {
@@ -89,7 +89,7 @@ body {
 
 /* Painéis */
 .grid-panel {
-    padding: 5px;
+    padding: 5px !important;
 }
 
 
