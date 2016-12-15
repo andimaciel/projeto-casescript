@@ -1,0 +1,36 @@
+   #nav-btn {
+      position: fixed;
+      border: #000 1px solid;
+      border-radius: 2px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #000;
+      transition: all 0.4s linear;
+    }
+    #nav-btn:hover {
+      border: #000 1px solid;
+    }
+    #nav-btn > div {
+      width: 20px;
+      height: 3px;
+      background: #EF5350;
+      margin: 4px 0px;
+      transition: all 0.3s linear;
+    }
+    #nav-btn:hover div {
+      background: #fff;
+    }
+    #nav-slide {
+      position: fixed;
+      left: -250px;
+      top: 60px;
+      width: 250px;
+      height: 0px;
+      background: #444;
+      color: #fff;
+      transition: left 0.2s linear;
+    }
+    .material-icons {
+        
+        color: #bbb;
+    }

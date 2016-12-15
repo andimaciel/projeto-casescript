@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Ajuda | CasesScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery JS 3.1.1 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS 3.3.7 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap JS 3.3.7 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome 4.7 -->
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
+
+    <script>
+        $('.collapse').collapse()
+    </script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Faixa escura */
+        
+        .jumbotron {
+            height: 20rem;
+            background-color: #666666;
+        }
+        /* Estilo dos Links laterais */
+        
+        .help-link, a:link {
+            color: #ffffff;
+            text-decoration: none;
+            transition: 0.3s linear;
+        }
+        
+        .help-link:hover {
+            color: #00BFA5;
+        }
+        /* Container com a lista de menus */
+        
+        .container-list {
+            width: 80rem;
+            font-size: 1.8rem;
+        }
+        
+        .menu-list {
+            cursor: pointer;
+        }
+        
+        .heading-list {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 3rem;
+            color: #00BFA5;
+        }
+        
+        .icon-list {
+            color: #00BFA5;
+            margin-right: 10px;
+        }
+        /* Sub-menu */
+        
+        .list-down {
+            background-color: #666666;
+            color: #ffffff;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Faixa escura e Links de ajuda -->
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container col-md-offset-3 col-sm-offset-3 col-xs-offset-1">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5">
+                            <a href="#ajuda.html">
+                                <h4  class="help-link">Ajuda CaseScript</h4>
+                            </a>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <a href="http://www.casescript.net/" target="_blank">
+                                <h4 class="help-link">Voltar ao CaseScript &nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container com a lista de menus -->
+            <div class="container container-list" id="accordion">
+                <div class="row">
+                    <ul class="list-groups">
+                        <li class="list-group-item heading-list">Bem-Vindo à Central de Ajuda do CaseScript</li>
+                        <li class="list-group-item menu-list" data-toggle="collapse" data-target="#ab" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Iniciando no CaseScript</li>
+                        <!-- Sub-menu -->
+                        <div id="ab" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Introdução</li>
+                        </div>
+                        <li class="list-group-item menu-list" data-toggle="collapse" data-target="#cd" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Conhecendo o Editor de código</li>
+                        <!-- Sub-menu -->
+                        <div id="cd" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Sub-menu Editor</li>
+                        </div>
+                        <li class="list-group-item  menu-list" data-toggle="collapse" data-target="#ef" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Grupos</li>
+                        <!-- Sub-menu -->
+                        <div id="ef" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Sub-menu Grupos</li>
+                        </div>
+                        <li class="list-group-item menu-list" data-toggle="collapse" data-target="#gh" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Interagindo em Fóruns</li>
+                        <!-- Sub-menu -->
+                        <div id="gh" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Sub-menu fóruns</li>
+                        </div>
+                        <li class="list-group-item menu-list" data-toggle="collapse" data-target="#ij" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Se conectando às Pessoas</li>
+                        <!-- Sub-menu -->
+                        <div id="ij" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Sub-menu pessoas</li>
+                        </div>
+                        <li class="list-group-item menu-list" data-toggle="collapse" data-target="#kl" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Códigos</li>
+                        <!-- Sub-menu -->
+                        <div id="kl" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Sub-menu códigos</li>
+                        </div>
+                        <li class="list-group-item menu-list" data-toggle="collapse" data-target="#mn" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Editando suas Preferências</li>
+                        <!-- Sub-menu -->
+                        <div id="mn" class="collapse list-groups">
+                            <li class="list-group-item list-down small">Sub-menu Preferências</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

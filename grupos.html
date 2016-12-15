@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Grupos | CasesScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS 3.3.7 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Bootstrap JS 3.3.7 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery JS 3.1.0 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Font Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!-- Font Awesome 4.7 -->
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
+
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #eee;
+                margin: 20px;
+            }
+            .card-style {
+                display: block;
+                background-color: #fff;
+                height: 100px;
+                width: 350px;
+                margin: 20px 0px;
+                box-shadow: 1px 1px 8px #999;
+                cursor: pointer;
+            }
+            .card-style:hover {box-shadow: 10px 10px 14px #999;transition: 0.5s;}
+            .card-img {
+                height: 100px;
+                width: 100px;
+            }
+            .media-heading {
+                margin-top: 10px;
+                color: #444;
+            }
+            .media-heading:hover, a:link {
+                color: #00C853;
+                text-decoration: none;
+            }
+            .media-body {
+                width: 70%;
+                height: 100%;
+            }
+            .members {
+                margin: 20px 0px 0px -65px;
+                color: #999;
+                float: left;
+             }
+             .btn-part {
+                 display: inline-block;
+                 margin: 10px;
+                 border-radius: 0px;
+             }
+             .badge {
+                 display: inline-block;
+                 background: #00C853;
+                 float: right;
+                 padding: 5px;
+                 margin: 10px;
+             }
+             .lbl {
+                 display: flex-inline;
+                 float: left;
+             }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Grupo  -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <h1>Card Design Grupos</h1>
+                            <div class="card-style">
+                                <div class="media">
+
+                                    <div class="media-left">
+                                        <img class="media-object img-thumbnail card-img" src="https://goo.gl/T99N2c">
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#"><h5 class="media-heading">Disc. Programação Internet Rica - 2016.2</h5></a>
+                                        <span class="label label-info lbl">Estácio FIC</span>
+                                        <div class="members pull-left"><small>1.235 Membros</small></div>
+                                        <div class="btn btn-sm btn-danger pull-right btn-part">Participar</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo Solicitação Pendente -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card-style">
+                                <div class="media">
+
+                                    <div class="media-left">
+                                        <img class="media-object img-thumbnail card-img" src="https://goo.gl/wnTK3q">
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#"><h5 class="media-heading">Disc. Programação Internet Rica - 2016.2</h5></a>
+                                        <span class="label label-primary lbl">Estácio FIC</span>
+                                        <span class="members"><small>1.235 Membros</small></span>
+                                        <div class="btn btn-sm btn-primary btn-part">Solicitação Pendente</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo com contador de atividades (se você já eh membro do grupo) -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card-style">
+                                <div class="media">
+                                    
+                                    <div class="media-left">
+                                        <img class="media-object img-thumbnail card-img" src="https://goo.gl/T99N2c">
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#"><h5 class="media-heading">Disc. Programação Internet Rica - 2016.2</h5></a>
+                                        <span class="label label-default lbl">Estácio FIC</span>
+                                        <span class="members"><small>1.235 Membros</small></span>
+                                        <span class="badge counter">+99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>    
+    </body>
+</html>

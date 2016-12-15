@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- jQuery JS 3.1.1 -->
+		<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<!-- Bootstrap CSS 3.3.7 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- Bootstrap JS 3.3.7 -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- Font Roboto -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<!-- Font Awesome 4.7 -->
+		<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
+
+        <style>
+            /* Banner */
+            /* Banner da Turma*/
+            .group-banner {
+                display: inline-block;
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 80px;
+                width: 100%;
+                background: linear-gradient(315deg, rgb(178, 223, 219) 0%, rgb(0, 77, 64) 100%);
+                border-left: 1px solid #bbb;
+                border-right: 1px solid #bbb;
+            }
+            /* Foto da Turma*/
+            .group-img {
+                position: absolute;
+                float: left;
+                left: 10px;
+                top: 10px;
+                height: 110px;
+                width: 110px;
+                margin: 0px 10px 10px 10px;
+                z-index: 1;
+            }
+            /* Nome da Turma*/
+            .group-header {
+                position: absolute;
+                float: left;
+                left: 0;
+                top: 80px;
+                height: 41px;
+                width: 100%;
+                background: #fff;
+                color: #444;
+                white-space: nowrap;
+                border: 1px solid #bbb;
+                box-shadow: 1px 0 2px #eee;
+            }
+            .group-name {
+                margin-top: 6px;
+                margin-left: 140px;
+            }
+            /* //. Banner */
+
+            /*======= Feed Códigos ======*/
+            .feed-header {
+                margin: 55px 0px 10px 0px;
+                
+            }
+            .feed-title {
+                display: inline-block;
+                width: 80%;
+            }
+            .feed-link {
+                color: #00BFA5;
+                width: 20%;
+            }
+            .feed-link a {color: #00BFA5;}
+
+            /*======= Grid lado direito ======*/
+            .grid-header {
+                margin: 55px 0px 10px 0px;
+                
+            }
+            .grid-table {margin-bottom: 0px;}
+            .table-link a {
+                color: #444;
+            }
+
+            .grid-panel {
+                padding: 5px;
+            }
+
+            /* TAREFAS */
+            .tarefa {
+                position: relative;
+                display: inline-block;
+                background: #eee;
+                height: 150px;
+                width: 100%;
+            }
+            .tarefa-file {
+                position: absolute;
+                display: block;
+                float: left;
+                height: 150px;
+                width: 25%;
+                padding-top: 20px;
+                background: #eee;
+                cursor: pointer;
+                text-align: center;
+                border-right: 1px solid #ccc;
+            }
+            .tarefa-file i {
+                font-size: 60px;
+            }
+            .tarefa-link {
+                margin-top: 10px;
+            }
+            .tarefa-link a {
+                color: #00BFA5;
+            }
+            .tarefa-iniciar {
+                position: relative;
+                display: inline-block;
+                float: right;
+                height: 150px;
+                width: 70%;
+            }
+            .tarefa-header {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 60px;
+                width: 100%;
+            }
+            .tarefa-title {
+                display: block;
+                white-space: normal;
+                overflow: hidden;
+                font-weight: 700;
+            }
+            .tarefa-body {
+                display: block;
+                position: absolute;
+                top: 40px;
+                left: 0px;
+                height: 95px;
+                width: 100%;
+            }
+            .tarefa-status {
+                display: block;
+            }
+            .tarefa-btn {
+                padding: 6px 40px;
+                background: #00BFA5;
+                border-color: #00BFA5;
+                border-radius: 0;
+            }
+            .tarefa-btn:hover {
+                background: #00796B;
+            }
+            /* //.TAREFAS */
+			.code-container {
+				display: block;
+				box-sizing: border-box;
+				margin-bottom: 8px;
+				box-shadow: 0 1px 5px #ddd;
+				overflow: hidden;
+				cursor: pointer;
+				background-color: #fff;
+				border: 1px solid #e3e3e3;
+				position: relative;
+				padding: 5px 10px;
+			}
+			
+			/*Título do código*/
+			.code-heading {
+				float: left;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				width: 66%;
+				height: 40px;
+			}
+			.code-heading a h4 {font-weight: 700; color: #444;}
+			.code-label {
+				float: right;
+				padding: 3px 8px;
+				font-weight: 200;
+				margin-top: -30px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				position: absolute;
+				top: 45px;
+				right: 10px;
+				width: 120px;
+				background: #999;
+			}
+
+			/*Detalhes do código*/
+			.code-details {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				width: 80%;
+				height: 40px;
+			}
+
+			/*Rodapé código*/
+			.code-footer {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				width: 100%;
+				height: 20px;
+			}
+			.code-footer a {color: #00BFA5;}
+            
+            /*======= Painéis ===========*/
+            /*Rodapé do painel*/
+			.panel-footer a {color: #00BFA5;}
+
+
+            /*========= CARD MEMBROS ===========*/
+            /*CARDS estilo base*/
+            .card-content2 {
+                display: inline-block;
+                margin-right: 5px;
+                text-align: center;
+                background: #eee;
+                height: 135px;
+                width: 100px;
+                border: 1px solid #ddd;
+                border-radius: 5px 5px 0px 0px;
+            }
+            /*CARDS imagem do álbum*/
+            .card-img2 {
+                height: 95px;
+                width: 100%;
+            }
+            /*CARDS título do álbum*/
+            .card-heading2 {
+                display: block;
+                height: 40px;
+                width: 100%;
+                padding: 0px 5px 0px 5px;
+                overflow: hidden;
+                box-sizing: border-box;
+                margin-top: -5px;
+            }
+            .card-heading2 h5 {
+                color: #444;
+            }
+            .card-heading2 h5:hover {
+                text-decoration: underline;
+            }
+            /* //.CARD MEMBROS*/
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+
+                <!--Banner da Turma-->
+                <div class="col-md-12">
+                    <div class="group-banner">
+                        <div class="media">
+                            <!--Foto da Turma-->
+                            <div class="media-left">
+                                <img class="media-object img-thumbnail group-img" src="https://goo.gl/wnTK3q">
+                            </div>
+                            <!--Nome da Turma-->
+                            <div class="group-header">
+                                <h3 class="media-heading group-name">Disc. Programação Internet Rica - 2016.2</h3>
+                            </div>
+                        </div>                        
+                    </div>   
+                </div>
+
+                <!--FEED-->
+                <div class="col-md-6 col-sm-6">
+                    <div class="feed-code">
+                        
+                        <!--Título do Feed-->
+                        <div class="feed-header">
+                            <h4 class="feed-title">Últimos códigos adicionados a turma</h4>
+                            <a href="#"><span class="feed-link text-right"><i class="fa fa-plus"></i> Ver Todos</span></a>
+                        </div>
+
+                        <!--Feed dos Últimos códigos-->
+                        <div class="code-container">
+                            <div class="code-heading">
+                                <a href="#"><h4>Formulário Bootstrap</h4></a>								
+                            </div>
+                            <span class="label label-default code-label">HTML, CSS, bootstrap</span>
+                            <div class="code-details">
+                                <p class="text-muted">Modelo de formulário usando o Framework bootstrap.</p>
+                            </div>
+                            <div class="code-footer">
+                                <small class="text-muted">Em 30/Set por</small> <a href="perfil.html"><small>Anderson Maciel</small></a>
+                            </div>
+                        </div>
+
+                        <div class="code-container">
+                            <div class="code-heading">
+                                <a href="#"><h4>Formulário Bootstrap</h4></a>								
+                            </div>
+                            <span class="label label-default code-label">HTML, CSS, bootstrap</span>
+                            <div class="code-details">
+                                <p class="text-muted">Modelo de formulário usando o Framework bootstrap.</p>
+                            </div>
+                            <div class="code-footer">
+                                <small class="text-muted">Em 30/Set por</small> <a href="perfil.html"><small>Anderson Maciel</small></a>
+                            </div>
+                        </div>
+
+                        <div class="code-container">
+                            <div class="code-heading">
+                                <a href="#"><h4>Formulário Bootstrap</h4></a>								
+                            </div>
+                            <span class="label label-default code-label">HTML, CSS, bootstrap</span>
+                            <div class="code-details">
+                                <p class="text-muted">Modelo de formulário usando o Framework bootstrap.</p>
+                            </div>
+                            <div class="code-footer">
+                                <small class="text-muted">Em 30/Set por</small> <a href="perfil.html"><small>Anderson Maciel</small></a>
+                            </div>
+                        </div>
+
+                        <div class="code-container">
+                            <div class="code-heading">
+                                <a href="#"><h4>Formulário Bootstrap</h4></a>								
+                            </div>
+                            <span class="label label-default code-label">HTML, CSS, bootstrap</span>
+                            <div class="code-details">
+                                <p class="text-muted">Modelo de formulário usando o Framework bootstrap.</p>
+                            </div>
+                            <div class="code-footer">
+                                <small class="text-muted">Em 30/Set por</small> <a href="perfil.html"><small>Anderson Maciel</small></a>
+                            </div>
+                        </div>
+
+                        <div class="code-container">
+                            <div class="code-heading">
+                                <a href="#"><h4>Formulário Bootstrap</h4></a>								
+                            </div>
+                            <span class="label label-default code-label">HTML, CSS, bootstrap</span>
+                            <div class="code-details">
+                                <p class="text-muted">Modelo de formulário usando o Framework bootstrap.</p>
+                            </div>
+                            <div class="code-footer">
+                                <small class="text-muted">Em 30/Set por</small> <a href="perfil.html"><small>Anderson Maciel</small></a>
+                            </div>
+                        </div>
+                        <!-- //.Feed dos Últimos códigos-->
+
+                    </div>
+                </div>
+                <!-- //.FEED-->
+
+                <!--Painéis Lado Direito-->
+                <div class="col-md-6 col-sm-6">
+                    <div class="grid-header">
+                        <h4 class="feed-title"><i class="fa fa-tasks"></i> Tarefas</h4>
+                        <a href="tarefas.html"><span class="feed-link text-right"><i class="fa fa-plus"></i> Ver Lista</span></a>
+                    </div>	
+
+                    <!--Painél TAREFAS	-->
+					<div class="panel panel-default">
+						<div class="panel-body grid-panel">
+
+							<div class="tarefa">
+                                <div class="tarefa-file">
+                                    <i class="fa fa-file-text"></i> <p>file1.pdf</p>
+
+                                    <div class="tarefa-link">
+                                        <a href="#">Ver Descrição</a>
+                                    </div>
+                                </div>
+
+                                <div class="tarefa-iniciar">
+                                    <div class="tarefa-header">
+                                        <h5 class="tarefa-title">Criação de Formulário Bootstrap</h5>
+                                    </div>
+                                    <div class="tarefa-body">
+                                        <h5 class="tarefa-status">
+                                            <p>Status: <span class="label label-success">Ativo</span></p>
+                                            <p>Data: 27/11/2016</p>
+                                        </h5>
+                                        <a class="btn btn-success tarefa-btn" href="#" role="button"> Iniciar Tarefa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+						</div>
+					</div>
+                    <!-- //.Painél TAREFAS	-->
+
+                    <!--Painél FÓRUNS-->
+                    <h4><i class="fa fa-comments-o"></i> Fóruns</h4>		
+					<div class="panel panel-default">
+						<div class="panel-body grid-panel">
+							<table class="table table-hover grid-table">
+                                <tr>
+                                    <th>Tópicos</th>
+                                    <th class="text-center">Categorias</th>
+                                    <th class="text-right">Atividades</th>
+                                </tr>
+                                <tr>
+                                    <td class="table-link"><a href="#">Dúvidas Gerais</a></td>
+                                    <td class="text-center"><span class="label label-default">Geral</span></td>
+                                    <td class="text-right">Há 10 min</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-link"><a href="#">Dicas Bootstrap</a></td>
+                                    <td class="text-center"><span class="label label-default">Web</span></td>
+                                    <td class="text-right">Há 1h</td>
+                                </tr>
+                            </table>
+						</div>
+						<div class="panel-footer text-center"><a href="#">Ver Mais</a></div>
+					</div>
+
+                    <!--Painél MEMBROS-->
+                    <h4><i class="fa fa-users"></i> Membros</h4>		
+					<div class="panel panel-default">
+						<div class="panel-body grid-panel">
+
+							<!--Card-->
+                            <div class="card card-content2">
+                                <!--Card image-->
+                                <img class="img-thumbnail card-img2" src="https://goo.gl/AY38vO" alt="Card image cap">
+
+                                <!--Card body-->
+                                <div class="card-body text-center">
+                                    <div class="card-heading2">
+                                        <a href="#">
+                                            <h5>Anderson Maciel</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-content2">
+                                <!--Card image-->
+                                <img class="img-thumbnail card-img2" src="https://goo.gl/AY38vO" alt="Card image cap">
+
+                                <!--Card body-->
+                                <div class="card-body text-center">
+                                    <div class="card-heading2">
+                                        <a href="#">
+                                            <h5>Moacir Casemiro</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-content2">
+                                <!--Card image-->
+                                <img class="img-thumbnail card-img2" src="https://goo.gl/AY38vO" alt="Card image cap">
+
+                                <!--Card body-->
+                                <div class="card-body text-center">
+                                    <div class="card-heading2">
+                                        <a href="#">
+                                            <h5>Manoel Ribeiro</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-content2">
+                                <!--Card image-->
+                                <img class="img-thumbnail card-img2" src="https://goo.gl/AY38vO" alt="Card image cap">
+
+                                <!--Card body-->
+                                <div class="card-body text-center">
+                                    <div class="card-heading2">
+                                        <a href="#">
+                                            <h5>Larry Page</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Card content-->
+
+						</div>
+						<div class="panel-footer text-center"><a href="#">Ver Mais</a></div>
+					</div>
+                </div>
+                <!-- //.Painéis Lado Direito-->
+
+            </div>
+        </div>
+    </body>
+</html>
