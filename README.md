@@ -1,5 +1,5 @@
 # Projeto CaseScript
-Projeto onde foram criados componentes para o site [CaseScript](http://www.casescript.net/), utilizando o framework Bootstrap como base inicial.
+Projeto de melhoria de design e usabilidade, onde foram criados componentes para o site [CaseScript](http://www.casescript.net/), utilizando o framework Bootstrap como base inicial.
 
 ## Descrição rápida dos arquivos:
 
