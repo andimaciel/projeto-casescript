@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: #eee;
+    background: #eeeeee;
 }
 
 
@@ -53,6 +53,7 @@ body {
     border-radius: 0px !important;
 }
 
+/* Linha divisória */
 .divider-horizontal {
     border-top: 1px solid rgba(0,0,0,0.1);
     margin: 5px 15px;
@@ -87,10 +88,18 @@ body {
     margin-left: 12px;
 }
 
-/* Painéis */
+/*========== Painéis =================*/
 .grid-panel {
     padding: 5px !important;
 }
+
+.grid-title {
+    margin-top: 20px;
+}
+
+/*Rodapé do painel*/
+.panel-footer > a {color: #00C853 !important;}
+.panel-footer > a:hover {color: #00C853;}
 
 
 /* ============ CARD CÓDIGOS ====================== */
@@ -148,7 +157,7 @@ body {
     width: 100%;
     height: 20px;
 }
-.code-footer a {color: #00BFA5;}
+.code-footer a {color: #00BFA5 !important;}
 
 
 /* ============ GRUPOS/TURMAS ====================== */
@@ -167,9 +176,12 @@ body {
     width: 312px;
     background: #fff;
     border: 0.5px solid #dedede;
-    margin: 20px 8px 0px 0px;
+    margin: 20px 8px 5px 0px;
     box-shadow: 1px 1px 4px #ccc;
     transition: 0.2s linear;
+}
+.card-content:last-child {
+    margin: 0px 8px 5px 0px;
 }
 .card-content:hover {box-shadow: 5px 5px 8px #bbb;}
 
@@ -179,8 +191,10 @@ body {
     float: left;
     left: 0;
     top: 0;
-    height: 100px;
+    height: 100px !important;
     width: 100px;
+    border-radius: 0px !important;
+    border: none !important;
 }
 .img-thumbnail {border: none;}
 
@@ -230,11 +244,14 @@ body {
     padding: 8px;
 }
 .card-members {color: #999;}
-.card-btn { margin-top: -10px; border-radius: 0px;}
+.card-btn { 
+    margin-top: -10px !important; 
+    border-radius: 0px !important;
+}
 .card-badge {
-    background: #00C853;
+    background: #00C853 !important;
     float: right;
-    padding: 5px;
+    padding: 5px !important;
     margin: -5px 8px 8px 10px;
 }
 
@@ -248,13 +265,14 @@ body {
 /* Botão criar turma  */
 .btn-criar {
     margin-top: 10px;
-    margin-right: 50px;
-    border-radius: 0px; 
-    background: #00BFA5;
-    border: none;
+    margin-right: 20px !important;
+    border-radius: 0px !important; 
+    background: #00BFA5 !important;
+    border: none !important;
+    padding: 10px 20px !important;
 }
 .btn-criar.btn-success:hover {
-    background: #00897B;
+    background: #00897B !important;
 }
 
 /* Barra de pesquisa por turmas*/
@@ -263,20 +281,22 @@ body {
     position: relative;
     background: transparent !important; 
     margin-top: 10px;
-    margin-right: 45px;
+    margin-right: 15px;
     transition: width 1s linear;
 }
 .style-input .form-control{
     border-bottom: 2px solid #666 !important; 
-    box-shadow:0 0 0; 
+    box-shadow:0 0 0 !important; 
     border-color: transparent;
     background: transparent;
     color: #000;
     font-size: 18px;
     padding-right: 30px;
+    border-radius: 0px;
 }
 .style-input .form-control:focus {
-    border-bottom: 3px solid #00BFA5 !important;
+    border-bottom: 2px solid #00BFA5 !important;
+    border-color: transparent;
 }
 .style-input button{
     display: inline-block;
@@ -290,7 +310,7 @@ body {
 
 /* Banner */
 /* Banner da Turma*/
-.group-banner {
+.banner-group {
     display: inline-block;
     position: relative;
     top: 0;
@@ -302,7 +322,7 @@ body {
     border-right: 1px solid #bbb;
 }
 /* Foto da Turma*/
-.group-img {
+.img-thumbnail.banner-img {
     position: absolute;
     float: left;
     left: 10px;
@@ -313,7 +333,7 @@ body {
     z-index: 1;
 }
 /* Nome da Turma*/
-.group-header {
+.banner-header {
     position: absolute;
     float: left;
     left: 0;
@@ -326,8 +346,8 @@ body {
     border: 1px solid #bbb;
     box-shadow: 1px 0 2px #eee;
 }
-.group-name {
-    margin-top: 6px;
+.media-heading.banner-name {
+    line-height: 1.5;
     margin-left: 140px;
 }
 
@@ -384,10 +404,11 @@ body {
 .tarefa-file i {
     font-size: 60px;
 }
-.tarefa-link {
-    margin-top: 10px;
-}
 .tarefa-link a {
+    margin-top: 10px;
+    color: #00BFA5;
+}
+.tarefa-link a:hover {
     color: #00BFA5;
 }
 .tarefa-iniciar {
@@ -422,13 +443,13 @@ body {
 .tarefa-status {
     display: block;
 }
-.tarefa-btn {
+.btn.btn-success.tarefa-btn {
     padding: 6px 40px;
     background: #00BFA5;
     border-color: #00BFA5;
     border-radius: 0;
 }
-.tarefa-btn:hover {
+.btn.btn-success.tarefa-btn:hover {
     background: #00796B;
 }
 
@@ -496,25 +517,34 @@ body {
 
 /* ============ PÁGINA AJUDA ====================== */
 /* Faixa escura */
-.jumbotron {
-    height: 20rem;
-    background-color: #666666;
+.jumbotron-custom {
+    height: 20rem !important;
+    width: 70%;
+    margin-left: 200px;
+    background-color: #666666 !important;
 }
 
-/* Estilo dos Links laterais */
-.help-link, a:link {
-    color: #ffffff;
+/* Estilo dos Links de ajuda */
+.help-link-left {
+    float: left;
+    color: #ffffff !important;
     text-decoration: none;
     transition: 0.3s linear;
 }
+.help-link-right {
+    float: right;
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
 
-.help-link:hover {
-    color: #00BFA5;
+.help-link-left:hover, .help-link-right:hover {
+    color: #00BFA5 !important;
 }
 
 /* Container com a lista de menus */
-.container-list {
-    width: 80rem;
+.container.container-list {
+    width: 80rem !important;
     font-size: 1.8rem;
 }
 
@@ -524,7 +554,7 @@ body {
 
 .heading-list {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px !important;
     text-align: center;
     font-size: 3rem;
     color: #00BFA5;
@@ -536,7 +566,7 @@ body {
 }
 
 /* Sub-menu */
-.list-down {
+.list-group-item.list-down {
     background-color: #666666;
     color: #ffffff;
     padding-left: 50px;

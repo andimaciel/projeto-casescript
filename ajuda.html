@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- JQuery 3.1.1 -->
-    <script src="_js/jquery-3.1.1.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="_css/style.css">
+    <!-- JQuery 3.1.1 -->
+    <script src="_js/jquery-3.1.1.min.js"></script>
+
     <!-- Bootstrap, JS e JQ -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="bootstrap/js/jquery.js" rel="stylesheet"></script>
@@ -28,28 +29,25 @@
 
 <body>
     <!-- Faixa escura e Links de ajuda -->
-    <div class="jumbotron">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="container col-md-offset-3 col-sm-offset-3 col-xs-offset-1">
-                    <div class="row">
-                        <div class="col-md-5 col-sm-5">
-                            <a href="#ajuda.html">
-                                <h4  class="help-link">Ajuda CaseScript</h4>
-                            </a>
-                        </div>
-                        <div class="col-md-7 col-sm-7">
-                            <a href="http://www.casescript.net/" target="_blank">
-                                <h4 class="help-link">Voltar ao CaseScript &nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="jumbotron jumbotron-custom">
+        <div class="container">
+            
             <!-- Container com a lista de menus -->
             <div class="container container-list" id="accordion">
                 <div class="row">
-                    <ul class="list-groups">
+                    <div class="col-md-6 col-sm-6">
+                        <a href="#ajuda.html">
+                            <h4 class="help-link-left">Ajuda CaseScript</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a href="http://www.casescript.net/" target="_blank">
+                            <h4 class="help-link-right">Voltar ao CaseScript &nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="list-group">
                         <li class="list-group-item heading-list">Bem-Vindo à Central de Ajuda do CaseScript</li>
                         <li class="list-group-item menu-list" data-toggle="collapse" data-target="#ab" data-parent="#accordion"><i class="icon-list fa fa-chevron-right" aria-hidden="true"></i>Iniciando no CaseScript</li>
                         <!-- Sub-menu -->
