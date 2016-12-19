@@ -126,7 +126,7 @@ body {
     height: 40px;
 }
 .code-heading a h4 {font-weight: 700; color: #444;}
-.code-label {
+.label.label-default.code-label {
     float: right;
     padding: 3px 8px;
     font-weight: 200;
@@ -355,7 +355,7 @@ body {
 /* ============ MODELO DA TURMA ====================== */
 /* Feed Códigos */
 .feed-header {
-    margin: 55px 0px 10px 0px;
+    margin: 50px 0px 10px 0px;
 
 }
 .feed-title {
@@ -572,3 +572,55 @@ body {
     padding-left: 50px;
 }
 
+
+/* Barra de título da página */
+.bar-title {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color: #00BFA5;
+    box-shadow: 1px 0px 8px #999;
+}
+
+/*========== MENU RÁPIDO DA HOME ============= */
+button.btn.btn-default.menu-btn {
+    position: relative;
+    display: inline-block;
+    background: #00BFA5;
+    height: 80px;
+    width: 190px;
+    padding: 10px 25px 10px 0px;
+    margin: 5px 20px 20px 0px;
+    border: 1px solid #009688;
+    border-radius: 0px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+button.btn.btn-default.menu-btn:hover {
+    background: #00796B;
+}
+i.menu-icon {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #fff;
+    margin-top: 16px;
+    font-size: 30px;
+}
+.menu-title {
+    margin-top: -5px;
+}
+.menu-count h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.verticalline {
+    border-right: 1px solid #00897B;
+    height: 44px;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+}
