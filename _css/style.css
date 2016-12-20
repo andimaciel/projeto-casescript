@@ -104,9 +104,11 @@ body {
 
 /* ============ CARD CÓDIGOS ====================== */
 .code-container {
+    position: relative;
     display: block;
+    height: 110px;
     box-sizing: border-box;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     box-shadow: 0 1px 5px #ddd;
     overflow: hidden;
     cursor: pointer;
@@ -116,33 +118,48 @@ body {
     padding: 5px 10px;
 }
 
+.code-avatar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+}
+
 /*Título do código*/
 .code-heading {
+    position: absolute;
+    top: 0;
+    left: 80px;
     float: left;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 66%;
+    width: 65%;
     height: 40px;
 }
 .code-heading a h4 {font-weight: 700; color: #444;}
 .label.label-default.code-label {
+    position: absolute;
+    top: 0;
+    right: 10px;
     float: right;
     padding: 3px 8px;
     font-weight: 200;
-    margin-top: -30px;
+    margin-top: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    position: absolute;
-    top: 45px;
-    right: 10px;
-    width: 120px;
-    background: #999;
+    background: #AB47BC;
 }
 
 /*Detalhes do código*/
 .code-details {
+    position: absolute;
+    top: 40px;
+    left: 80px;
     text-overflow: ellipsis;
     overflow: hidden;
     width: 80%;
@@ -151,10 +168,13 @@ body {
 
 /*Rodapé código*/
 .code-footer {
+    position: absolute;
+    top: 80px;
+    left: 80px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
+    width: 80%;
     height: 20px;
 }
 .code-footer a {color: #00BFA5 !important;}
