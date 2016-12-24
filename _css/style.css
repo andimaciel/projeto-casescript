@@ -39,18 +39,18 @@ body {
 /*Botões Seguir, Seguindo e Editar perfil*/
 .btn-follow {
     display: block;
-    padding: 7px 80px;
-    border-radius: 0px;
+    padding: 7px 80px !important;
+    border-radius: 0px !important;
 }
 .btn-following {
     display: block;
-    padding: 7px 70px;
-    border-radius: 0px;
+    padding: 7px 70px !important;
+    border-radius: 0px !important;
 }
 .btn-edit {
     display: block;
-    padding: 1px 5px;
-    border-radius: 0px;
+    padding: 1px 5px !important;
+    border-radius: 0px !important;
 }
 
 /* Linha divisória */
@@ -90,7 +90,7 @@ body {
 
 /*========== Painéis =================*/
 .grid-panel {
-    padding: 5px;
+    padding: 5px !important;
 }
 
 .grid-title {
@@ -151,8 +151,15 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    background: #AB47BC;
 }
+.code-label.code-html {background: #FF7043;}
+.code-label.code-javascript {background: #FFD600;}
+.code-label.code-css {background: #7E57C2;}
+.code-label.code-python {background: #42A5F5;}
+.code-label.code-xml {background: #26A69A;}
+.code-label.code-java {background: #EF5350;}
+.code-label.code-cpp {background: #66BB6A;}
+.code-label.code-objectivec {background: #5C6BC0;}
 
 /*Detalhes do código*/
 .code-details {
@@ -289,6 +296,7 @@ body {
     background: #00BFA5 !important;
     border: none !important;
     padding: 10px 20px !important;
+    box-shadow: 2px 4px 8px #ccc;
 }
 .btn-criar.btn-success:hover {
     background: #00897B !important;
