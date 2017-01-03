@@ -4,6 +4,7 @@ Projeto de melhoria de design e usabilidade, onde foram criados componentes para
 ## Descrição rápida dos arquivos:
 
 * `ajuda` --> Modelo de página de ajuda.
+* `chat` --> Página de chat individual, é acessada a partir da página `listar-msg`.
 * `grupos` --> Modelo dos grupos/turmas.
 * `home` --> Modelo da Home com um Menu Rápido à direita.
 * `listar-msg` --> Página onde mostra as últimas conversas do usuário via mensagem privada.

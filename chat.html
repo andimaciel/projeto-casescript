@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="_css/style.css">
+    <!-- JQuery 3.1.1 -->
+    <script src="_js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap, JS e JQ -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery.js" rel="stylesheet"></script>
+    <script src="bootstrap/js/bootstrap.js" rel="stylesheet"></script>
+
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome 4.7 -->
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
+ 
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-10">
+                <!--Título do Feed-->
+                <div class="feed-header">
+                    <h4 class="feed-title">Chat Individual</h4>
+                    <button type="button" class="btn btn-default btn-sm pull-right"><i class="fa fa-arrow-left"></i> Voltar às mensagens</button>
+                </div>
+                
+                <!--Painél Chat Individual -->
+                <div class="chat-container">
+                   <!-- Cabeçalho do chat -->
+                    <div class="chat-heading">
+                        <div class="chat-avatar">
+                            <img src="_img/img-elon.png" alt="" class="img-responsive img-circle">
+                        </div>
+                        <h3 class="chat-title">Elon Musk</h3>
+                        <!-- Botão de excluir chat -->
+                        <div class="chat-del">
+                            <button class="btn btn-link" data-toggle="modal" data-target=".aviso-excluir">
+                                <i class="fa fa-trash fa-2x"></i>
+                                <p><small> Excluir Conversa</small></p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Modal do chat -->
+                    <div class="modal fade aviso-excluir" tabindex="-1" role="dialog">
+                      <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Aviso!</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Excluir esta conversa?</p>
+                          </div>  
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-success">Sim, Excluir conversa</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Área das mensagens -->
+                    <div class="chat-body">
+                          
+                        <ul class="chat-ul">
+                            <li class="col-md-12">
+                                <div class="chat-you">
+                                    <h4><strong>Assunto:</strong> Título da mensagem</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque blanditiis tempora quia dignissimos porro quaerat ducimus voluptatem nisi perferendis quae?</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                            <li class="col-md-12">
+                                <div class="chat-me">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                            
+                            <li class="col-md-12">
+                                <div class="chat-you">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                            <li class="col-md-12">
+                                <div class="chat-you">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                            
+                            <li class="col-md-12">
+                                <div class="chat-me">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                            <li class="col-md-12">
+                                <div class="chat-me">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                            
+                            <li class="col-md-12">
+                                <div class="chat-you">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                    <small class="chat-activity text-muted pull-right"> 10:30h</small>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <!-- Área da caixa de texto e botão enviar -->
+                    <div class="chat-footer">
+                        <form class="form-inline">
+                            <input type="text" class="form-control" placeholder="Digite sua mensagem">
+                            <button type="submit" class="btn btn-enviar pull-right">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div> 
+        </div>
+    </div>
+
+</body>
+</html>
