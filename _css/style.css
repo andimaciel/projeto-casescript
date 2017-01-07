@@ -490,7 +490,7 @@ body {
 
 
 /* ============ CARD MEMBROS ====================== */
-/*CARDS estilo base*/
+/*CARDS Mini*/
 .card-content2 {
     display: inline-block;
     margin-right: 5px;
@@ -501,12 +501,12 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px 5px 0px 0px;
 }
-/*CARDS imagem do álbum*/
+/*CARDS imagem*/
 .card-img2 {
     height: 95px;
     width: 100%;
 }
-/*CARDS título do álbum*/
+/*CARDS título*/
 .card-heading2 {
     display: block;
     height: 40px;
@@ -760,7 +760,7 @@ i.menu-icon {
     position: absolute;
     padding: 25px;
     background: #fff;
-    max-height: 385px;
+    max-height: 380px;
     overflow-y: auto;
 }
 .chat-ul li {
@@ -768,7 +768,7 @@ i.menu-icon {
 }
 .chat-me {
     display: block;
-    background: #E8F5E9;
+    background: #80CBC4;
     color: #444;
     padding: 10px 20px 10px 10px;
     max-width: 90%;
@@ -798,4 +798,114 @@ i.menu-icon {
 }
 .chat-footer .form-control {
     width: 80% !important;
+}
+
+/* Menu Lateral Fixo */
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 52px;
+    width: 230px;
+    background: #fafbfc!important;
+}
+
+.current-user {
+    position: relative;
+    padding: 5px 5px 0 70px;
+    height: 55px;
+    margin: 10px 0 15px;
+    background: #fafbfc;
+    color: #333333;
+}
+.user-avatar {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 55px;
+    width: 55px;
+}
+.user-info {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    height: 50px;
+    width: 145px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.side-menu {
+    margin: 25px 5px 10px 0;
+    display: block;
+    min-height: 100px;
+    border-left: solid 4px #4ba4a8;
+}
+.side-menu > ul , .side-menu > li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-weight: 400;
+    line-height: 1;
+}
+nav.sidebar .side-menu>ul>li>a>i {
+    font-size: 20px;
+    margin-right: 15px;
+    width: 20px;
+    float: left;
+    line-height: 14px;
+    text-align: center;
+}
+
+.item-menu {
+    display: block;
+    padding: 12px 10px 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+.item-menu a {
+    color: #333333;
+    text-decoration: none;
+}
+.item-menu:hover {
+    background: #ccc;
+    border-left: solid 6px #4ba4a8;
+}
+.item-premium a {
+    padding: 0px 20px !important;
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+}
+.badge-bg {background: #00BFA5; color: #fff;}
+
+.sidebar ul .sub-menu li {
+    border: none;
+    line-height: 28px;
+    margin-left: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: #999;
+}
+.sub-menu a {
+    list-style: none;
+    text-decoration: none;
+    color: #999;
+}
+.sub-menu a:hover {
+    color: #444;
+}
+.sidebar ul .sub-menu li:hover {
+    color: #444;
+}
+.sidebar ul .sub-menu li:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
 }
