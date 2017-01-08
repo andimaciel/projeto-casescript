@@ -867,8 +867,8 @@ nav.sidebar .side-menu>ul>li>a>i {
     transition: 0.1s linear;
 }
 .item-menu a {
-    color: #333333;
-    text-decoration: none;
+    color: #333333 !important;
+    text-decoration: none !important;
 }
 .item-menu:hover {
     background: #ccc;
@@ -876,11 +876,11 @@ nav.sidebar .side-menu>ul>li>a>i {
 }
 .item-premium a {
     padding: 0px 20px !important;
-    color: #333333;
-    text-decoration: none;
+    color: #333333 !important;
+    text-decoration: none !important;
     font-size: 16px;
 }
-.badge-bg {background: #00BFA5; color: #fff;}
+.badge-bg {background: #00BFA5 !important; color: #fff;}
 
 .sidebar ul .sub-menu li {
     border: none;
